@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Element Li Centered alignment</title>
+    <style type="text/css">
+    ul, li
+    {
+        margin: 0;
+        padding: 0;
+    }
+    ul 
+    {
+        list-style: none;
+    }
+    .box
+    {
+        border: 1px solid #ECEDF0;
+        height: 38px;
+        line-height: 38px;
+    }
+    .box ul
+    {
+        width: 100%;
+        height: 38px;
+        text-align: center;
+    }
+    .box ul li
+    {
+        border: 1px solid #ccc;
+        margin: 8px 10px;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        display: inline-block;
+    }
+    *+html .box ul li
+    {
+        display: inline;
+    } 
+    </style>
+</head>
+<body>
+<p>1. Set ul style as "text-align: center;"</p>
+<p>2. Set li style as "display: inline-block;", below IE7 as "display: inline;"</p>
+<div class="box">
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</div>
+</body>
+</html>
