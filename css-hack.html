@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <title>CSS hack Test</title>
+    <style type="text/css">
+    .box
+    {
+        width: 200px;
+        width: 200px;
+        border: 1px solid #ccc;
+        color: Black;
+        color: Teal\0; /* 支持IE8,9 */
+        color: Navy\9; /* 支持IE8,9, Opera */
+        *color: Red; /* 支持IE6, IE7 */
+        *+color: Yellow; /* 支持IE6, IE7 */
+        +color: Gray; /* 支持IE6, IE7 */
+        _color: Green; /* IE6专用hack  */
+    }
+    </style>
+</head>
+<body>
+<div class="box">
+    test<br />
+    test<br />
+    test<br />
+</div>
+</body>
+</html>
