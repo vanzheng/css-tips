@@ -17,6 +17,7 @@
 </style>
 </head>
 <body>
+<p>盒模型的height的默认值为auto, 它表示盒模型的高度由它所包裹的内容高度来决定, 因此div不设置height的值就可以实现高度的自适应。然而在实际css布局实践中，常常出现一些特殊的需求。div的高度初始为某一固定高度，然后随着内容的增多高度自适应。css属性中min-height是专门来解决这个问题的， 它表示给盒模型设置一个最小的高度。 如min-height: 200px, 当div的内容高于200px时, div会自动伸展。IE6不支持这个属性，可以用css hack来解决。</p>
 <p>内容高度小于200px</p>
 <div class="boxwrapper">
     <div class="box">
