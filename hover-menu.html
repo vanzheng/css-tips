@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <title>Hover Menu</title>
+    <style type="text/css">
+        .clearfix
+        {
+            clear: both;
+        }
+        .menu-list
+        {
+            float: left;
+            font-size: 13px;
+            padding: 0 50px 0 18px;
+            line-height: 40px;
+            margin-right: 10px;
+            background: url(images/menu-icons.png) no-repeat right -35px;
+            position: relative;
+            width: 100px;
+            white-space: nowrap;
+        }
+        .menu-list > span
+        {
+            width: 100px;
+            overflow: hidden;
+            display: inline-block;
+            white-space: nowrap;
+        }
+        .menu-list:hover
+        {
+            cursor: pointer;
+            padding: 0 49px 0 17px;
+            border: 1px solid #f8f8f8;
+            border-bottom: none;
+            -webkit-box-shadow: 0 6px 10px rgba(0, 0, 0, 0.175);
+            -moz-box-shadow: 0 6px 10px rgba(0, 0, 0, 0.175);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.175);
+        }
+        .menu-list .submenu-list
+        {
+            position: absolute;
+            left: -1px;
+            top: 40px;
+            display: none;
+            z-index: 1;
+            background-color: #fff;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 200px;
+            overflow-y: auto;
+            border-left: 1px solid #f8f8f8;
+            border-right: 1px solid #f8f8f8;
+            border-bottom: 1px solid #f8f8f8;
+            -moz-box-shadow: 0 6px 10px rgba(0, 0, 0, 0.175);
+            -webkit-box-shadow: 0 6px 10px rgba(0, 0, 0, 0.175);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.175);
+        }
+        .menu-list .submenu-list > li
+        {
+            line-height: 40px;
+            padding: 0 10px 0 18px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        .submenu-list > li:hover
+        {
+            background-color: #f1fbff;
+        }
+        .menu-list:hover .submenu-list
+        {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-wrapper">
+        <div class="menu-list">
+            <span>All classes</span>
+            <ul class="submenu-list">
+                <li>All classes </li>
+                <li>Class A</li>
+                <li>Class B</li>
+                <li>Class C</li>
+                <li>Class D</li>
+            </ul>
+        </div>
+        <div class="menu-list">
+            <span>All semesters</span>
+            <ul class="submenu-list">
+                <li>Today </li>
+                <li>This week </li>
+                <li>Next 2 weeks</li>
+                <li>This month </li>
+                <li>All semesters</li>
+            </ul>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</body>
+</html>
