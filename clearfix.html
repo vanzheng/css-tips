@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <title>Clear fix Demo</title>
+    <style type="text/css">
+    .box {
+        width: 600px;
+        border: 1px solid black;
+    }
+    .floatbox {
+        float: left;
+        width: 280px;
+        height: 280px;
+        border: 1px solid red;
+    }
+    /* clearfix style */
+    .clearfix:after {
+        content:"";
+        display: block;
+        height: 0;
+        clear: both;
+    }
+    .clearfix {
+        *zoom: 1;
+        /* IE6, IE7 hack */
+    }
+    </style>
+</head>
+
+<body>
+    <p>在加入clearfix样式之后，box的div被撑开了
+    </p>
+    <div class="box clearfix">
+        <div class="floatbox">float box 1</div>
+        <div class="floatbox">float box 2</div>
+        <div class="floatbox">float box 3</div>
+        <div class="floatbox">float box 4</div>
+        <div class="floatbox">float box 5</div>
+    </div>
+</body>
+
+</html>
