@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <title>Mock dorp down list</title>
+    <style type="text/css">
+    .clearfix:after {
+        content:" ";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+    .clearfix {
+        *zoom: 1;
+        /* IE6, IE7 hack */
+    }
+    .clearfix {
+        clear: both;
+    }
+    .select-box {
+        float: left;
+        font-size: 13px;
+        margin-right: 10px;
+        position: relative;
+        white-space: nowrap;
+    }
+    .select-box .drop-holder {
+        width: 100px;
+        overflow: hidden;
+        display: inline-block;
+        white-space: nowrap;
+        padding: 0 50px 0 18px;
+        line-height: 40px;
+        background: url(images/menu-icons.png) no-repeat right -35px;
+        cursor: pointer;
+    }
+    .select-box:hover > .drop-holder {
+        visibility: hidden;
+    }
+    .select-box .drop-list-wrapper{
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none;
+        z-index: 1;        
+        border: 1px solid #f8f8f8;
+        -o-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.175);
+        -moz-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.175);
+        -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.175);
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.175);
+    }
+    .select-box:hover .drop-list-wrapper{
+        display: block;
+    }
+    .select-box .drop-list {
+        background-color: #fff;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        max-height: 200px;
+        overflow-y: auto;
+    }
+    .select-box .drop-list > li {
+        line-height: 40px;
+        padding: 0 10px 0 18px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    .drop-list > li:hover {
+        background-color: #f1fbff;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="menu-wrapper">
+        <div class="select-box">
+            <span class="drop-holder">All classes</span>
+            <div class="drop-list-wrapper">
+                <span class="drop-holder">All classes</span>
+                <ul class="drop-list">
+                    <li>All classes</li>
+                    <li>Class A</li>
+                    <li>Class B</li>
+                    <li>Class C</li>
+                </ul>
+            </div>
+        </div>
+        <div class="select-box">
+            <span class="drop-holder">All semesters</span>
+            <div class="drop-list-wrapper">
+                <span class="drop-holder">All semesters</span>
+                <ul class="drop-list">
+                    <li>Today</li>
+                    <li>This week</li>
+                    <li>Next 2 weeks</li>
+                    <li>This month</li>
+                    <li>Next month</li>
+                    <li>Next 2 month</li>
+                    <li>All semesters</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
