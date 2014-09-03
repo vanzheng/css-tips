@@ -1,4 +1,4 @@
 css-tricks
 ==========
 
-Collect a variety of css tricks
+A variety of css tricks
