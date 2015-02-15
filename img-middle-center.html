@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>图片水平垂直居中</title>
+    <style type="text/css">
+    .box {
+        width: 700px;
+        height: 500px;
+        border: 1px solid #000;
+        text-align: center;
+    }
+    .box i {
+        height: 100%;
+        width: 0;
+        vertical-align: middle;
+        display: inline-block;
+    }
+    .box img {
+        border: 1px solid #ccc;
+        vertical-align: middle;
+    }
+    .box2 {
+        width: 700px;
+        height: 500px;
+        border: 1px solid #000;
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .box2 img {
+        border: 1px solid #ccc;
+    }
+    </style>
+</head>
+
+<body>
+    <h2>未知图片宽高水平垂直居中定位</h2>
+    <p>方法一：IE6/IE7利用在img标签的前面插入一对高度为100%空标签的办法。</p>
+    <div class="box">
+        <i></i>
+        <img src="http://www.baidu.com/img/bdlogo.png">
+    </div>
+    <p>方法二：图片父容器设置为display: table-cell, IE8以上浏览器支持。</p>
+    <div class="box2">
+        <img src="http://www.baidu.com/img/bdlogo.png">
+    </div>
+</body>
+
+</html>
