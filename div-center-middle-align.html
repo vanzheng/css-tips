@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>div水平垂直居中</title>
+    <style type="text/css">
+    .wrapper1 {
+        width: 300px;
+        height: 300px;
+        border: 1px solid #000;
+        background-color: #DDF879;
+        display: table;
+        vertical-align: middle;
+    }
+    .inner1 {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .content1 {
+        margin: 0 10px;
+        padding: 5px;
+        height: 50px;
+        border: 1px solid #ccc;
+    }
+    .code-section {
+        background: #ddd;
+    }
+    .wrapper2 {
+        width: 300px;
+        height: 300px;
+        border: 1px solid #000;
+        background-color: #DDF879;
+        position: relative;
+        text-align: center;
+    }
+    #content2 {
+        position: absolute;
+        top: 50%;
+        margin-top: -25px;
+        height: 50px;
+    }
+    .content2 {
+        margin: 10px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        display: block;
+    }
+    .wrapper3 {
+        width: 300px;
+        height: 300px;
+        border: 1px solid #000;
+        background-color: #DDF879;
+        text-align: center;
+    }
+    #float3 {
+        float: left;
+        height: 50%;
+    }
+    #content3 {
+        position: relative;
+        top: 50%;
+        margin-top: -25px;
+        height: 50px;
+    }
+    .content3 {
+        margin: 10px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        display: block;
+    }
+    .wrapper4 {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        border: 1px solid #000;
+        background-color: #DDF879;
+    }
+    .inner4 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+        width: 90%;
+        height: 50px;
+        border: 1px solid #ccc;
+    }
+    </style>
+</head>
+
+<body>
+    <h2>div水平垂直居中</h2>
+    <h3>方法一</h3>
+    <p>这个方法把div 的显示方式设置为表格, IE8以上浏览器支持</p>
+    <p class="code-section">
+        <code>.wrapper{display: table;}</code>
+        <br />
+        <code>.inner{display: table-cell; vertical-align:middle;}</code>
+    </p>
+    <div class="wrapper1">
+        <div class="inner1">
+            <div class="content1">
+                <p>aaaaaaaaaaaaaaaaa</p>
+            </div>
+
+        </div>
+    </div>
+    <h3>方法二</h3>
+    <p>方法使用绝对定位的 div，把它的 top 设置为 50％，top margin 设置为负的 content 高度。这意味着对象必须在 CSS 中指定固定的高度。</p>
+    <p class="code-section">
+        <code>.content2{position: absolute; top: 50%; margin-top: -25px; height: 50px;}</code>
+    </p>
+    <div class="wrapper2">
+        <div class="content2" id="content2">
+            <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        </div>
+    </div>
+    <h3>方法三</h3>
+    <p>在 content 元素外插入一个 div。设置此 div height:50%; margin-bottom:-contentheight;。 content 清除浮动，并显示在中间。</p>
+    <p class="code-section">
+        <code>#float3  {float:left; height:50%; margin-bottom:-25px;}</code>
+        <br />
+        <code>#content3  {clear:both; height:50px; position:relative;}</code>
+    </p>
+    <div class="wrapper3">
+        <div id="float3"></div>
+        <div class="content3" id="content3">
+            <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        </div>
+    </div>
+    <h3>方法四</h3>
+    <p>这个方法使用了一个 position:absolute，有固定宽度和高度的 div。这个 div 被设置为 top:0; bottom:0;。但是因为它有固定高度，其实并不能和上下都间距为 0，因此 margin:auto; 会使它居中。使用 margin:auto;使块级元素垂直居中是很简单的。</p>
+    <pre class="code-section">
+        <code>
+            .inner4{
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                margin: auto;
+                width: 90%;
+                height: 50px;
+                border: 1px solid #ccc;
+            }
+        </code>
+    </pre>
+    <div class="wrapper4">
+        <div class="inner4">
+            <p>aaaaaaaaaaaaaaaaa</p>
+        </div>
+    </div>
+</body>
+
+</html>
