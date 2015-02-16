@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>圣杯布局</title>
+    <style type="text/css">
+    body {
+        margin: 0;
+        padding: 0;
+        font: 12px "\5b8b\4f53", Arial, tahoma, sans-serif;
+        color: #000000;
+    }
+    .wrapper {
+        width: 100%;
+    }
+    .hf{
+        min-height: 200px;
+        background-color: #666;
+        font-size: 30px;
+        line-height: 60px;
+        text-align: center;
+        color: #fff;
+    }
+    .clearfix:after {
+        content: " ";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+    .clearfix {
+        *zoom: 1;
+        /* IE6, IE7 hack */
+    }
+    /* 方式一布局样式 */
+    .container {
+        padding-left: 150px;
+        padding-right: 200px;
+        clear: both;
+    }
+    .container .column {
+        float: left;
+        min-height: 500px;
+        font-size: 20px;
+        line-height: 36px;
+        color: #fff;
+    }
+    .column {
+        position: relative;
+        float: left;
+    }
+    #left {
+        width: 150px;
+        background-color: #3366FF;
+        margin-left: -100%;
+        right: 150px;
+    }
+    #center {
+        width: 100%;
+        background-color: #CCCC66;
+    }
+    #right {
+        width: 200px;
+        background-color: #FF9933;
+        margin-right: -200px;
+    }
+
+    /* 方式二布局样式 */
+    .container2 {
+        padding-left: 150px;
+        padding-right: 200px;
+        clear: both;
+        position: relative;
+    }
+    .container2 .column2 {
+        min-height: 500px;
+        font-size: 20px;
+        line-height: 36px;
+        color: #fff;
+    }
+    #left2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 150px;
+        background-color: #3366FF;
+    }
+    #center2 {
+        width: 100%;
+        background-color: #CCCC66;
+    }
+    #right2 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 200px;
+        background-color: #FF9933;
+    }
+    </style>
+</head>
+
+<body>
+    <h1>圣杯布局：左右两栏固定，中间一栏自适应。</h1>
+    <h2>方式一: 采用margin负值来定位</h2>
+    <div class="wrapper">
+        <div id="header" class="hf">header</div>
+        <div class="container clearfix">
+            <div id="center" class="column">content</div>
+            <div id="left" class="column">left sidebar</div>
+            <div id="right" class="column">right sidebar</div>
+        </div>
+        <div id="footer" class="hf">footer</div>
+    </div>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h2>方式二：左右两栏采用绝对定位，中间一栏width: 100%</h2>
+    <div class="wrapper">
+        <div id="header2" class="hf">header</div>
+        <div class="container2 clearfix">
+            <div id="center2" class="column2">content</div>
+            <div id="left2" class="column2">left sidebar</div>
+            <div id="right2" class="column2">right sidebar</div>
+        </div>
+        <div id="footer2" class="hf">footer</div>
+    </div>
+</body>
+
+</html>
